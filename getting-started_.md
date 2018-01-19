@@ -1,129 +1,137 @@
-
-
+  
+  
 # Asch-Dapp
-
-
+  
+  
+  
 #### Folder structure & installation
+  
 ```
 root  
      / asch-cli
      / asch-node-1
      / asch-node-2
-
+  
 # first install nvm
 wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
 nvm install 7.0.0
 nvm install 8.0.0
-
+  
 # download asch-cli
 git clone https://github.com/aschplatform/asch-cli.git asch-cli && cd asch-cli && npm install && chmod u+x bin/asch-cli && nvm use 8 && bin/asch-cli -help && cd ..
-
-
+  
+  
 # download asch-node-1
 git clone https://github.com/aschplatform/asch.git asch-node-1 && cd asch-node-1 && npm install && nvm use 7.0.0 && cd ..
-
+  
 # start the first node:
 nvm use 7.0.0
 cd asch-node-1
 node ./app.js
 cd ..
-
-
+  
+  
 # download asch-node-2
 # git clone https://github.com/aschplatform/asch.git asch-node-2 && cd asch-node-2 && npm install && nvm use 7.0.0 && cd ..
-
+  
 # start the second node:
 #nvm use 7.0.0
 #cd asch-node-2
 #cd node ./app.js
 ```
-
-
-
-
+  
+  
+  
+  
 #### Owner Address
+  
 ```
 address: A4hSa28WuATzkRiFDCsSpE8yvG9Py73uD1
 secret: fall destroy discover turkey bronze smooth web grass slide vote wise sustain
 publicKey: 47d16dbb8455142df6ba229b09f8c4b4056f75a49cb1c87d487bca728486e4d6
 ```
-
+  
 #### Create new  Dapp on localnet
-
+  
+  
 ```
 # first start the first in a new console
 mkdir asch-node-1/dapps
 cd asch-node-1/dapps
 nvm use 8.0.0
-
+  
 ../../asch-cli/bin/asch-cli -H 127.0.0.1 dapps -a
-
+  
 # enter dapp name?
 hello
-
+  
 # enter dapp description?
 [empty]
-
+  
 # enter dapp tags?
 [empty]
-
+  
 # choose dapp category
 1
-
+  
 # enter dapp link
 https://github.com/sqfasd/asch-hello-dapp/archive/master.zip
-
+  
 # enter dapp icon url
 http://1000logos.net/wp-content/uploads/2016/10/Bluetooth-Logo.png
-
+  
 # enter public keys of dapp delegates  - hex array, use ',' for separator (at least 5 delegates, max 101):
 8c117a74efe93e64287ee54c4d424f4b61c3bf22dc6b6fcbe84c0a7f03c9da96,10e30ac04d83562727a686719227baff3265c5bb36d16da0edc0bb4c335776fc,0b543d3cbd6355b26251ad66abe531eac1e620a2751945ee2ddbd80402a0d1cc,0556397b30fda6b229b2c47448a5f7325ddfe146d4008f7ffef07414b0549b11,93d9104c5d8a2c1a2593d241fab7e42e9df6da3e0ededf3078a1b080d86a38ad
-
+  
 # how many delegates are needed to unlock asset of a dapp?
 3
-
+  
 ```
-
+  
 Hint to asch-cli: 
 asch-cli error message not really helpful if not enough
-
-
+  
+  
 #### Register Dapp on localnet
+  
 First you have to transfer money to your account to be able to register the dapp. Our main account is the **Owner Account** on the top of the document.
-
+  
 **Prerequesists**
 - The local node must be running
 - You are located in the ``root`` Folder
 - For the parameter **secret** use the secret of a delegate located in ``asch-node-1/config.json``
-
+  
 ```
 # send money to our Owner-Address
 nvm use 8.0.0
-asch-cli/bin/asch-cli -H 127.0.0.1 sendmoney --secret "alter art sick gallery equal voice bunker sauce claw tourist twice essay" --to "A4hSa28WuATzkRiFDCsSpE8yvG9Py73uD1" --amount 20000000
+asch-cli/bin/asch-cli -H 127.0.0.1 sendmoney --secret "aware rabbit syrup expose visa list pause shuffle lunch audit exchange wrong" --to "A4hSa28WuATzkRiFDCsSpE8yvG9Py73uD1" --amount 20000000
 ```
-
-
-
-
+  
+  
+  
+  
 #### Register Dapp on localnet
+  
 Register Dapp with the secret of our **Owner Account**
 Current directory ``asch-node-1/dapps``
 ```
 nvm use 8.0.0
 ../../asch-cli -H 127.0.0.1 registerdapp --metafile dapp.json --secret "fall destroy discover turkey bronze smooth web grass slide vote wise sustain"
 ```
-
-
-
+  
+  
+  
 -----------------------------
 -----------------------------
 -----------------------------
-
-
-
+  
+  
+  
 # Appendix
-
+  
+  
 ### asch-dapp-1/config.json
+  
 First node is configured on port 4096 on localhost (127.0.0.1)
 ```
 {
@@ -281,8 +289,9 @@ First node is configured on port 4096 on localhost (127.0.0.1)
   }
 }
 ```
-
+  
 ### Asch-dapp-2/config.json
+  
 Second node is configured on port 5000 on localhost (127.0.0.1)
 ```
 {
@@ -340,32 +349,33 @@ Second node is configured on port 5000 on localhost (127.0.0.1)
   }
 }
 ```
-
-
+  
+  
 **App-Delegates (at least 5):**
 ```
 # Delegate 1
 address: AnHbLXumRfHyFV87CnTiGTcAES7hPwox8,
 secret: pride emotion shiver prize before brief movie panda wrestle monkey custom smile
 publicKey: 8c117a74efe93e64287ee54c4d424f4b61c3bf22dc6b6fcbe84c0a7f03c9da96
-
+  
 # Delegate 2
 address: ALNnXxg3M5VZkuSc s1ZvGuEUtJmgQKY98X',
 secret: country donate issue boring derive ketchup fish alarm acid disease shallow mirror
 publicKey: 10e30ac04d83562727a686719227baff3265c5bb36d16da0edc0bb4c335776fc
-
+  
 # Delgate 3
 address: ALixj31iCEfR8AnYU2TwXsLzSK8u8E4qc9
 secret: era alcohol tiger style choice radio bike airport book limit harsh rubber
 publicKey: 0b543d3cbd6355b26251ad66abe531eac1e620a2751945ee2ddbd80402a0d1cc
-
+  
 # Delegate 4
 address: ANQDEYH2L3uairp5tCo1X6MQFk66Cx7unw
 secret: inmate cabbage acoustic vote admit ahead salmon huge leaf pink reunion sun
 publicKey: 0556397b30fda6b229b2c47448a5f7325ddfe146d4008f7ffef07414b0549b11
-
+  
 # Delgate 5
 address: APCXr6AeoQZTfqzmfBC8E1U7h1fNN8GjCW
 secret: rain organ hat zoo adjust fall dad crack fiction search grow reopen
 publicKey: 93d9104c5d8a2c1a2593d241fab7e42e9df6da3e0ededf3078a1b080d86a38ad
 ```
+  
