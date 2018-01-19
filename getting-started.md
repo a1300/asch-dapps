@@ -99,7 +99,7 @@ First you have to transfer money to your account to be able to register the dapp
 ```
 # send money to our Owner-Address
 nvm use 8.0.0
-asch-cli/bin/asch-cli -H 127.0.0.1 sendmoney --secret "alter art sick gallery equal voice bunker sauce claw tourist twice essay" --to "A4hSa28WuATzkRiFDCsSpE8yvG9Py73uD1" --amount 20000000
+asch-cli/bin/asch-cli -H 127.0.0.1 sendmoney --secret "aware rabbit syrup expose visa list pause shuffle lunch audit exchange wrong" --to "A4hSa28WuATzkRiFDCsSpE8yvG9Py73uD1" --amount 70000000
 ```
 
 
