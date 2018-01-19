@@ -74,7 +74,7 @@ hello
 https://github.com/sqfasd/asch-hello-dapp/archive/master.zip
 
 # enter dapp icon url
-http://1000logos.net/wp-content/uploads/2016/10/Bluetooth-Logo.png
+http://o7dyh3w0x.bkt.clouddn.com/hello.png
 
 # enter public keys of dapp delegates  - hex array, use ',' for separator (at least 5 delegates, max 101):
 8c117a74efe93e64287ee54c4d424f4b61c3bf22dc6b6fcbe84c0a7f03c9da96,10e30ac04d83562727a686719227baff3265c5bb36d16da0edc0bb4c335776fc,0b543d3cbd6355b26251ad66abe531eac1e620a2751945ee2ddbd80402a0d1cc,0556397b30fda6b229b2c47448a5f7325ddfe146d4008f7ffef07414b0549b11,93d9104c5d8a2c1a2593d241fab7e42e9df6da3e0ededf3078a1b080d86a38ad
