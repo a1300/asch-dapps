@@ -109,16 +109,14 @@ asch-cli/bin/asch-cli -H 127.0.0.1 sendmoney --secret "aware rabbit syrup expose
 Register Dapp with the secret of our **Owner Account**
 Current directory ``asch-node-1/dapps``
 ```
+cd asch-node-1/dapps
 nvm use 8.0.0
-../../asch-cli -H 127.0.0.1 registerdapp --metafile dapp.json --secret "fall destroy discover turkey bronze smooth web grass slide vote wise sustain"
+../../asch-cli/bin/asch-cli -H 127.0.0.1 registerdapp --metafile dapp.json --secret "fall destroy discover turkey bronze smooth web grass slide vote wise sustain"
 ```
 
 
 
 -----------------------------
------------------------------
------------------------------
-
 
 
 # Appendix
